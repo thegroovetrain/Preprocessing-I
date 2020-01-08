@@ -3,17 +3,77 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>My Resume</title>
+  <title>Eric Seibt - Resume</title>
 
   <link rel="stylesheet" href="css/index.css">
+
+  <!--google-fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,700&display=swap" rel="stylesheet">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
-<body>
-  <h1>My Resume</h1>
+<body class="body">
+
+  <header class="header">
+    <nav>
+      <ul class="nav">
+        <li class="nav__item nav__item_active"><a class="nav__link nav__link_active" href="#">Home</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Portfolio</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Music</a></li>
+        <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <h1 class="header__page-title">Hi, I'm Eric!</h1>
+  </header>
+
+  <main class="container">
+    <section class="content-block content-block_headshot">
+      <img class="content-block__photo" src="img/headshot.jpg">
+    </section>
+
+    <section class="content-block content-block_intro">
+      <h2 class="content-block__header">Intro</h2>
+      <p>Lorem ipsum dolor amet hoodie cray succulents scenester knausgaard cardigan. Fam tumeric hell of dreamcatcher vape tote bag quinoa direct trade knausgaard trust fund health goth vinyl +1. Pug 3 wolf moon YOLO shabby chic single-origin coffee, williamsburg pop-up. Echo park try-hard intelligentsia, migas scenester asymmetrical portland snackwave. Shaman next level sriracha cardigan fingerstache pour-over mixtape stumptown vape butcher cornhole jianbing. Hashtag asymmetrical twee enamel pin tousled, retro hexagon godard flannel. Wolf hexagon raw denim blog keytar occupy lo-fi fam poutine franzen helvetica intelligentsia kale chips locavore.</p>
+    
+      <div class="container sub-block-holder">
+
+        <section class="content-block content-block_skills">
+          <h2 class="content-block__header">Skills</h2>
+          <ul>
+            <li>Full-Stack Development</li>
+            <li>Flask</li>
+            <li>Django</li>
+            <li>node.js</li>
+            <li>express.js</li>
+            <li>MongoDB</li>
+            <li>SQL</li>
+            <li>AWS</li>
+            <li>SEO</li>
+          </ul>
+        </section>
+  
+        <section class="content-block content-block_work-history">
+          <h2 class="content-block__header">Work History</h2>
+        </section>
+  
+      </div>
+    
+    </section>
+
+  </main>
+    
+  <footer class="footer">
+    <section class="contact" id="contact">
+      Contact
+    </section>
+
+    <section class="copyright">Copyright &copy;2020 Eric Seibt</section>
+  </footer>
+
 </body>
 </html>
