@@ -130,10 +130,13 @@ table {
 * {
   box-sizing: border-box;
 }
-html,
-body {
-  height: 100%;
+/* having this breaks my design apparently?
+
+html, body {
+    height: 100%;
 }
+
+*/
 /*
 html {
 	background-color: red;
@@ -145,7 +148,6 @@ html {
 .body {
   background: #F0FFF0;
   margin: 0 auto;
-  min-height: 100vh;
   max-width: 900px;
 }
 .header {
@@ -184,6 +186,20 @@ html {
 .contact {
   background: #88CC88;
   font-family: 'Libre Franklin', sans-serif;
+  padding: 1rem;
+  text-align: center;
+}
+.contact__header {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.contact-form {
+  margin-top: 1rem;
+}
+.contact-form__field {
+  margin-bottom: 0.5rem;
 }
 .copyright {
   background: #2D882D;
@@ -203,20 +219,30 @@ html {
   padding: 1em;
   width: calc(100% / 3);
 }
+@media screen and (max-width: 500px) {
+  .content-block_headshot {
+    width: 100%!important;
+  }
+}
 .content-block_intro {
   padding: 1em;
-  width: calc((100% / 3) * 2);
+  width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .content-block_intro {
+    width: 100%!important;
+  }
 }
 .content-block_skills,
 .content-block_work-history {
   padding: 1em;
   width: 50%;
 }
-.content-block_skills {
-  padding-left: 0;
-}
-.content-block_work-history {
-  padding-right: 0;
+@media screen and (max-width: 500px) {
+  .content-block_skills,
+  .content-block_work-history {
+    width: 100%!important;
+  }
 }
 .content-block__photo {
   width: 100%;
@@ -226,4 +252,15 @@ html {
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 700;
   margin-bottom: 1em;
+}
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+  width: calc((100% / 3) * 2);
+}
+@media screen and (max-width: 500px) {
+  .content-container {
+    width: 100%!important;
+  }
 }
