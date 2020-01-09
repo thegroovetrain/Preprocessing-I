@@ -53,7 +53,199 @@ table {
     box-sizing: border-box;
 }
 
+/* having this breaks my design apparently?
+
 html, body {
     height: 100%;
 }
 
+*/
+
+//test
+/*
+html {
+	background-color: red;
+}
+*/
+
+// Page Config
+
+@page-width: 900px;
+@breakpoint__mobile: 500px;
+
+// Colors
+
+@color__forest-green: #2D882D;
+@color__forest-green_lighter: #88CC88;
+@color__forest-green_light: #55AA55;
+@color__forest-green_dark: #116611;
+@color__forest-green_darker: #004400;
+@color__black: #0F160F;
+@color__white: #F0FFF0;
+
+// Grid
+
+.col(@width) {
+	padding: 1em;
+
+	@media screen and (max-width: @breakpoint__mobile) {
+		width: 100%!important;
+	}
+}
+
+.col(one-third) {
+	width: calc(100% / 3);
+}
+
+.col(two-thirds) {
+	width: calc((100% / 3) * 2);
+}
+
+.col(half) {
+	width: 50%;
+}
+
+.col(full) {
+	width: 100%;
+}
+
+// Fonts
+
+.font__libre-franklin(@weight: regular) {
+	font-family: 'Libre Franklin', sans-serif;
+}
+
+.font__libre-franklin(regular) {
+	font-weight: 400;
+}
+
+.font__libre-franklin(bold) {
+	font-weight: 700;
+}
+
+// Body
+
+html {
+	background: @color__black;
+}
+
+.body {
+	background: @color__white;
+	margin: 0 auto;
+	max-width: @page-width;
+}
+
+// Header
+
+.header {
+	width: 100%;
+
+	&__page-title {
+		background: @color__forest-green;
+		color: @color__white;
+		.font__libre-franklin(bold);
+		font-size: 3rem;
+		padding: 1rem;
+		text-align: center;
+	}
+}
+
+// Navigation
+
+.nav {
+	background: @color__black;
+	display: flex;
+
+	&__link {
+		color: @color__white;
+		display: inline-block;
+		.font__libre-franklin;
+		text-align: center;
+		text-decoration: none;
+		padding: 1rem;
+
+		&_active {
+			background: @color__forest-green;
+		}
+
+		&:hover {
+			background: @color__forest-green_light;
+		}
+	}
+}
+
+// Footer
+
+.footer {
+	width: 100%;
+}
+
+.contact {
+	background: @color__forest-green_lighter;
+	.font__libre-franklin;
+	padding: 1rem;
+	text-align: center;
+
+	&__header {
+		.font__libre-franklin(bold);
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+}
+
+.contact-form {
+	margin-top: 1rem;
+}
+
+.contact-form__field {
+	margin-bottom: 0.5rem;
+}
+
+.copyright {
+	background: @color__forest-green;
+	color: @color__white;
+	.font__libre-franklin;
+	padding: 1em;
+	text-align: center;
+}
+
+// Main Content
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.content-block {
+	.font__libre-franklin;
+
+	&_headshot {
+		.col(one-third);
+	}
+
+	&_intro {
+		.col(full);
+	}
+
+	&_skills,
+	&_work-history {
+		.col(half);
+	}
+
+	&__photo {
+		width: 100%;
+	}
+
+	&__header {
+		font-size: 1.5rem;
+		.font__libre-franklin(bold);
+		margin-bottom: 1em;
+	}
+}
+
+.content-container {
+	display: flex;
+	flex-wrap: wrap;
+
+	.col(two-thirds);
+}
